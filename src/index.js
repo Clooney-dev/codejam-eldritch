@@ -27,7 +27,6 @@ let DifficultiesArrayBlue = BlueCardsData;
 
 let ancient = null;//переменная, содержащая текущего древнего
 let newStages = [];//массив, совмещающий карты со всех этапов, для их дальнейшего вытягивания из колоды
-let allStages = [];
 
 function showAncients() {
   $('.ancients-container').removeClass('hidden');
@@ -54,6 +53,10 @@ function setDifficult(event) {
     DifficultiesArrayGreen = GreenCardsData.filter(item => item.difficulty === 'easy');
     DifficultiesArrayBrown = BrownCardsData.filter(item => item.difficulty === 'easy');
     DifficultiesArrayBlue = BlueCardsData.filter(item => item.difficulty === 'easy');
+  }else if($(event.target).is('#very-high')) {
+    DifficultiesArrayGreen = GreenCardsData.filter(item => item.difficulty === 'hard');
+    DifficultiesArrayBrown = BrownCardsData.filter(item => item.difficulty === 'hard');
+    DifficultiesArrayBlue = BlueCardsData.filter(item => item.difficulty === 'hard');
   }
   console.log('Зеленые карты, фильтрованные по выбранной сложности', DifficultiesArrayGreen);
   console.log('Коричневые карты, фильтрованные по выбранной сложности', DifficultiesArrayBrown);
@@ -95,7 +98,7 @@ function setAncientCards(event) {
 }
 
 function getRandElem(arr,n) {
-  let sortedArr, randElemArr, newArr;
+  let sortedArr, randElemArr;
 
   sortedArr = arr.sort(() => 0.5 - Math.random());
   randElemArr = sortedArr.slice(0,n);
