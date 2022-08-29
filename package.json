@@ -1,0 +1,17 @@
+{
+  "version": "0.1.0",
+  "description": "My new js application",
+  "private": true,
+  "name": "codejam-eldritch",
+  "scripts": {
+    "start": "rss-scripts start",
+    "build": "rss-scripts build"
+  },
+  "devDependencies": {
+    "rss-scripts": "^0.2.4"
+  },
+  "dependencies": {
+    "jquery": "^3.6.1",
+    "lodash": "^4.17.21"
+  }
+}

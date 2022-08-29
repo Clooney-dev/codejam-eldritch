@@ -1,0 +1,131 @@
+:root {
+  --radius: 10px;
+  --gap-value: 25px;
+  --top-value: 40px;
+}
+
+body {
+  background-image: url("./assets/home.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ancients-container {
+  display: flex;
+  justify-content: center;
+  gap: var(--gap-value);
+  margin-top: 40px;
+}
+
+.ancient-image {
+  width: 200px;
+  height: 260px;
+  border-radius: var(--radius);
+}
+
+.ancient-image:hover,
+.difficulty-btn:hover,
+.shuffle-btn:hover,
+.desk-image:hover {
+  border: coral ridge 5px;
+}
+
+.difficulty-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  gap: var(--gap-value);
+  margin-top: var(--top-value);
+}
+
+.difficulty-btn {
+  width: 100px;
+  height: 30px;
+  border-radius: var(--radius);
+  border-style: none;
+  background-color: rgba(88, 33, 145, 0.7);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.difficulty-btn:focus,
+.shuffle-btn:focus {
+  opacity: 0.5;
+}
+
+.shuffle-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.shuffle-btn {
+  width: 340px;
+  height: 30px;
+  border-radius: var(--radius);
+  border-style: none;
+  background-color: rgba(88, 33, 145, 0.7);
+}
+
+.deck-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  gap: var(--gap-value);
+  margin-top: var(--top-value);
+}
+
+.deck-image, .card-image {
+  background-size: cover;
+  width: 130px;
+  height: 190px;
+  border-radius: var(--radius);
+}
+
+.stage-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.stage-step {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: coral;
+}
+
+.dots-container {
+  display: flex;
+  gap: 15px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.green {
+  background-color: rgba(0,128,0, 0.5);
+}
+
+.red {
+  background-color: rgba(255,0,0, 0.5);
+}
+
+.blue {
+  background-color: rgba(52, 52, 215, 0.5);
+}
+
+.dot {
+  display: flex;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  visibility: hidden;
+}
